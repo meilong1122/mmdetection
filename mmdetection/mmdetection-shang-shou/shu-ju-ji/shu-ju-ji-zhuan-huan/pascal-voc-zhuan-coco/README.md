@@ -5,7 +5,7 @@
 {% hint style="info" %}
 <mark style="color:orange;">数据集如果已经划分好，跳过此部分</mark>
 
-_**`mmdetection/data/VOCdevkit/VOC2007/ImageSets/Main`****目录下包含：**_
+_**`mmdetection/data/VOCdevkit/VOC2007/ImageSets/Main`****\*\*\*\*目录下包含：**_
 
 * train.txt
 * trainval.txt
@@ -345,15 +345,15 @@ if __name__ == '__main__':
     3. 跟的第一文件夹必须是./VOCdevkit文件夹，该文件的目录结构是
     VOCdevkit/
     ├── VOC2007
-    │   ├── Annotations
-    │   ├── convert_code
-    │   ├── ImageSets
-    │   │   ├── Layout
-    │   │   ├── Main
-    │   │   └── Segmentation
-    │   ├── JPEGImages
-    │   ├── SegmentationClass
-    │   └── SegmentationObject
+    │   ├── Annotations
+    │   ├── convert_code
+    │   ├── ImageSets
+    │   │   ├── Layout
+    │   │   ├── Main
+    │   │   └── Segmentation
+    │   ├── JPEGImages
+    │   ├── SegmentationClass
+    │   └── SegmentationObject
     └── VOCcode
     4. --out-dir是输出目录
     5. 输出的文件类型，指定coco，输出*.json文件
@@ -361,7 +361,6 @@ if __name__ == '__main__':
 
 # 命令如下
 (open-mmlab) xbsj@xbsj:~/mmdetection/data$ python ./pascal_voc.py ./VOCdevkit --out-dir ./VOCdevkit --out-format coco
-
 ```
 
 ## 附一个博客数据集转换链接

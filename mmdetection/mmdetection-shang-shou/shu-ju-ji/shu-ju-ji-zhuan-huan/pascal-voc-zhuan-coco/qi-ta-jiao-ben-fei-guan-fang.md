@@ -209,14 +209,12 @@ for name_txt in names_txt:
     with open(os.path.join('./ImageSets/Main', name_txt)) as f:
         lines = f.readlines()
         print(('文件 %s'%name_txt).ljust(35) + ("共有数据：%d个"%len(lines)).ljust(50))
-
 ```
 
 ## 3. .txt-->.xml
 
 * 标定图片:生成label文件,文件内容为类别及boundingbox信息
-* 生成符合VOC格式要求的文件 主要是Annotations/.xml ImageSets/main/.txt\
-
+* 生成符合VOC格式要求的文件 主要是Annotations/.xml ImageSets/main/.txt\\
 
 _**数据集的标注这一步可以使用labelImg 标注自己的图片https://github.com/tzutalin/labelImg**_
 

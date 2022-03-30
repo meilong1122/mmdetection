@@ -18,11 +18,11 @@ _`cp ~/mmdetection/configs/yolo/yolov3_d53_mstrain-416_273e_coco.py ~/mmdetectio
 
 ### **2.修改**
 
-打开_**`yolov3_d53_mstrain-416_273e_coco_copy.py`**_
+打开\_**`yolov3_d53_mstrain-416_273e_coco_copy.py`**\_
 
-* 修改_**`model->bboxhead->num_classes = 20，`**_因为VOC类别是20种
-* 复制_**`mmdetection/configs/base/datasets/voc0712.py`**_所有内容，替换_**`yolov3_d53_mstrain-416_273e_coco_copy.py中`**_整个_**`“# dataset setting”`**_
-* 将_**`data->train->dataset->annfile/img_prefix`**_中，有2012的_**`data_root`**_删掉。如果数据集中有VOC2012则不需要改动，注意多余的逗号要删掉
+* 修改\_**`model->bboxhead->num_classes = 20，`**\_因为VOC类别是20种
+* 复制\_**`mmdetection/configs/base/datasets/voc0712.py`**_所有内容，替换_**`yolov3_d53_mstrain-416_273e_coco_copy.py中`**_整个_**`“# dataset setting”`**\_
+* 将\_**`data->train->dataset->annfile/img_prefix`**_中，有2012的_**`data_root`**\_删掉。如果数据集中有VOC2012则不需要改动，注意多余的逗号要删掉
 
 **完成以上三处修改，就可以训练了**
 
@@ -41,11 +41,11 @@ _`cp ~/mmdetection/configs/yolo/yolov3_d53_mstrain-416_273e_coco.py ~/mmdetectio
 * _**`optimizer->lr`**_
 * _**`runner->max_epochs`**_
 
-_**`sample_per_gpu/workers_per_gpu`**_根据本地GPU、电脑内存，以及实际训练时每张图片训练需要的内存动态调整
+\_**`sample_per_gpu/workers_per_gpu`**\_根据本地GPU、电脑内存，以及实际训练时每张图片训练需要的内存动态调整
 
-_**`optimizer->lr，`**_假设官方_**`gpu`**_个数_**`*sample_per_gpu=64 lr`**_设置为_**`0.001，`**_你的_**`gpu_nums * sample_per_gpu==16`**_，学习率与这个值成正比，设置为 _<mark style="color:purple;">**`lr=0.001 * 16/64`**</mark>_
+_**`optimizer->lr，`**假设官方**`gpu`**个数**`*sample_per_gpu=64 lr`**设置为**`0.001，`**你的**`gpu_nums * sample_per_gpu==16`**_，学习率与这个值成正比，设置为 _<mark style="color:purple;">**`lr=0.001 * 16/64`**</mark>_
 
-_**`runner->max_epochs`**_根据你自己需要的情况训练，官方log训练日志可作参考
+\_**`runner->max_epochs`**\_根据你自己需要的情况训练，官方log训练日志可作参考
 
 #### 2. 训练及测试命令
 
@@ -168,7 +168,7 @@ ModuleNotFoundError: No module named 'mmdet'
 
 ![多gpu测试时的错误，修改导入路径为mmdet.core.evaluation即可](../../../.gitbook/assets/Snipaste\_2022-03-24\_14-02-16.png)
 
-****
+***
 
 **4. 训练日志可视化**
 
@@ -209,10 +209,10 @@ python tools/analyze_logs.py cal_train_time \
 
 ### 配置
 
-* _`../base/models/faster_rcnn_r50_fpn.py`_模型文件
+* \_`../base/models/faster_rcnn_r50_fpn.py`\_模型文件
 * `../base/datasets/coco_detection.py`训练数据配置
-* _`../base/schedules/schedule_1x.py`_训练策略，例如学习率，最大epoch
-* _`../base/default_runtime.py`_日志等信息
+* \_`../base/schedules/schedule_1x.py`\_训练策略，例如学习率，最大epoch
+* \_`../base/default_runtime.py`\_日志等信息
 
 ### 日志
 
