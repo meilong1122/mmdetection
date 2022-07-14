@@ -405,6 +405,3 @@ log_config = dict(
 
 _**mmdet/models/\[dense\_heads, roi\_heads]下**_
 
-_\*\*\*\*_
-
-_\*\*\*\*_
